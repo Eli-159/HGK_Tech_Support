@@ -1,5 +1,3 @@
 <template>
-  <div class="about">
-    <h1>This is a contact page</h1>
-  </div>
+  <h1>Contact Page Coming Soon</h1>
 </template>

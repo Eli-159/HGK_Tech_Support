@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import ReviewsView from '../views/ReviewsView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     path: '/reviews',
     name: 'reviews',
     component: ReviewsView
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: 'notFound',
+    component: NotFoundView
   }
 ]
 
