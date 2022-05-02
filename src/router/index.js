@@ -11,27 +11,42 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: 'Home'
+    }
   },
   {
     path: '/about',
     name: 'about',
-    component: AboutView
+    component: AboutView,
+    meta: {
+      title: 'About'
+    }
   },
   {
     path: '/contact',
     name: 'contact',
-    component: ContactView
+    component: ContactView,
+    meta: {
+      title: 'Contact'
+    }
   },
   {
     path: '/reviews',
     name: 'reviews',
-    component: ReviewsView
+    component: ReviewsView,
+    meta: {
+      title: 'Reviews'
+    }
   },
   {
     path: '/:pathMatch(.*)',
     name: 'notFound',
-    component: NotFoundView
+    component: NotFoundView,
+    meta: {
+      title: '404'
+    }
   }
 ]
 
@@ -46,9 +61,10 @@ NProgress.configure({
   trickleSpeed: 200
 });
 
-router.beforeEach(() => {
+router.beforeEach((to) => {
   GStore.hamburgerOpen = false;
   NProgress.start();
+  document.title = `${to.meta.title ? `${to.meta.title} | ` : ''}Hire a Grandkid Tech Support`
 });
 
 router.afterEach(() => {
