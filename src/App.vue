@@ -3,6 +3,7 @@
     <div id="headerContents">
       <img src="@/assets/HGK_Tech_Logo-Long_Dark.png" id="headerLogo" alt="Hire a Grandkid Tech Support Logo">
       <nav>
+        
         <div id="menuToggle">
           <input type="checkbox" id="hamburgerCheckbox" v-model="GStore.hamburgerOpen">
           <div id="overlay"></div>
@@ -13,18 +14,22 @@
           <ul id="menu">
             <li><router-link to="/" :class="routeName=='home'?'activeLink':''">Home</router-link></li>
             <li><router-link to="/about" :class="routeName=='about'?'activeLink':''">About</router-link></li>
-            <li><router-link to="/contact" :class="routeName=='contact'?'activeLink':''">Contact</router-link></li>
-            <li><router-link to="/reviews" :class="routeName=='reviews'?'activeLink':''">Reviews</router-link></li>
-          </ul>
-          
+            <div id="headerContact">
+          <p>
+            Call Eli today on 
+            <a href="tel:+61490435671">0490 435 671</a>
+            or via email at
+            <a href="mailto:eli@hireagrandkidtech.com">eli@hireagrandkidtech.com</a>
+          </p>
         </div>
+          </ul>
+        </div>
+
+        
       </nav>
     </div>
   </header>
-  
-  <main>
-    <router-view/>
-  </main>
+  <router-view/>
 </template>
 
 <script>
@@ -43,6 +48,7 @@
     --main-background-color: #333333;
     --main-text-color: #e6e6e6;
     --main-accent-color: #26a66a;
+    --page-max-width: 900px;
   }
 
   body {
@@ -59,7 +65,7 @@
 
   #headerContents {
     width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     padding: 10px 0;
   }
@@ -69,7 +75,12 @@
     max-width: 400px;
   }
 
-  @media only screen and (min-width: 800px) {
+  #headerContact p, #headerContact {
+    font-size: 13px;
+    color: var(--main-background-color);
+  }
+
+  @media only screen and (min-width: 900px) {
     nav {
       float: right;
       margin: 3% 0;
@@ -83,9 +94,15 @@
     #hamburgerCheckbox {
       display: none;
     }
+
+    #headerContact {
+      position: absolute;
+      top: 0;
+      right: calc(50vw - 450px);
+    }
   }
   
-  @media only screen and (max-width: 799px) {
+  @media only screen and (max-width: 899px) {
     nav {
       float: right;
       margin: 4% 0;
@@ -195,10 +212,12 @@
       left: 0;
       top: 0;
       transition: 500ms;
+      visibility: hidden;
     }
 
     input:checked ~ #overlay {
       opacity: 0.75;
+      visibility: visible;
     }
   }
 
@@ -229,7 +248,17 @@
 
   main {
     width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
+  }
+
+  p, li {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--main-accent-color);
   }
 </style>
