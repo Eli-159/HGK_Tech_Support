@@ -1,9 +1,9 @@
 <template>
-  <div class="carousel">
+  <!-- <div class="carousel">
     <img class="banner" src="@/assets/Christmas_Banner_1.jpg">
     <img class="banner" src="@/assets/Christmas_Banner_2.jpg">
     <img class="banner" src="@/assets/Christmas_Banner_3.jpg">
-  </div>
+  </div> -->
 
   <main>
 
@@ -41,6 +41,8 @@
       Don't see what you're looking for? Just let me know! It may have just not made it on the list. 
       Otherwise, I can offer a discounted rate for unfamiliar work as it may take a little longer.
     </p>
+
+    <h2>Hourly Rate: $30/hr</h2>
 
   </main>
   
