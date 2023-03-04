@@ -21,7 +21,7 @@
 
     <h2>Affordable, Grandkid Rates</h2>
     <p>
-      Proffesional callout fees can be expensive. Smaller problems often don't seem to be worth it. That's where I come in.
+      Professional callout fees can be expensive. Smaller problems often don't seem to be worth it. That's where I come in.
       For a fraction of the rate and no callout fee, I'm able to help you with everyday issues.
     </p>
 
