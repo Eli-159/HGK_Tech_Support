@@ -49,19 +49,19 @@
 </template>
 
 <script>
-  import Flickity from 'flickity';
-  export default {
-    name: 'HomeView',
-    mounted() {
-      new Flickity('.carousel', {
-        contain: true,
-        autoPlay: true,
-        imagesLoaded: true,
-        percentPosition: false,
-        wrapAround: true
-      });
-    }
-  }
+  // import Flickity from 'flickity';
+  // export default {
+  //   name: 'HomeView',
+  //   mounted() {
+  //     new Flickity('.carousel', {
+  //       contain: true,
+  //       autoPlay: true,
+  //       imagesLoaded: true,
+  //       percentPosition: false,
+  //       wrapAround: true
+  //     });
+  //   }
+  // }
 </script>
 
 <style>
