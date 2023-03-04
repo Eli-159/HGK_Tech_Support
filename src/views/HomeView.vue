@@ -42,7 +42,7 @@
       Otherwise, I can offer a discounted rate for unfamiliar work as it may take a little longer.
     </p>
 
-    <h2>Hourly Rate: $30/hr</h2>
+    <h2>Hourly Rate: $30</h2>
 
   </main>
   
